@@ -1,0 +1,61 @@
+const getUserChoice = userInput => {
+  
+  userInput = userInput.toLowerCase();
+  if (userInput === "rock" || userInput === "scissors" || userInput === "paper" || userInput === "bomb") {return userInput;
+	} else {
+  console.log ("Please select ROCK, PAPER or SCISSORS. Try again bro!");
+  }
+}
+
+getComputerChoice = function() {
+  let randomNumber = Math.floor(Math.random()* 3);
+  if (randomNumber === 0) 
+  {return "rock";}
+  else if (randomNumber === 1) 
+  {return "paper";}
+  else {return "scissors";}
+}
+
+function determineWinner(userChoice, computerChoice) {
+  if (userChoice === computerChoice) {
+    return ("It is a tie. Silencio. Try again.");
+	} 
+  
+  if (userChoice === "rock") {
+    if (computerChoice === "paper") {
+    return "Computer Wins!";
+    } else {
+      return "Player 1 Wins!";}       
+ 	}
+  
+  if (userChoice === "paper") {
+    if (computerChoice === "scissors") {
+    return "Computer Wins!";
+    } else {
+      return "Player 1 Wins!";}       
+ 	}
+  
+   if (userChoice === "scissors") {
+    if (computerChoice === "rock") {
+    return "Computer Wins!";
+    } else {
+      return "Player 1 Wins!";}       
+ 	}
+  
+  if (userChoice === "bomb") {
+    return "SHAKALAKA BOOOOOOM! YOU WIN"
+  }
+  
+}
+
+function playGame() {
+  
+  const userChoice = getUserChoice("bomb");
+  console.log("You went for " + userChoice + ".");
+  const computerChoice = getComputerChoice();
+  console.log("The computer went for " + computerChoice  + ".");
+  
+  console.log(determineWinner(userChoice, computerChoice));
+}
+
+  playGame();
