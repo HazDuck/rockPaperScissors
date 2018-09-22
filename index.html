@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>RPS</title>
+  <style>
+    #result {
+      font-family: 'Courier New', Courier;
+      font-size: 200%;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Courier New', Courier;
+      font-size: 400%;
+      text-align: center;
+      margin-bottom:10px;
+    }
+
+    h2 {
+      font-family: 'Courier New', Courier;
+      font-size: 200%;
+      text-align: center
+    }
+
+    .choiceHuman {
+      font-family: sans-serif;
+    }
+
+    body {
+      background: yellow;
+    }
+
+    .choice {
+      text-align: center;
+      
+    }
+
+    .choice_button {
+      font-family: 'Courier New', Courier, monospace;
+      font:bolder;
+      background: black;
+      font-size: 120%;
+      color: yellow;
+      padding: 10px; 
+      border: none;
+      width: 150px;
+      height: 100px;
+      margin: 10px;
+      padding-bottom: 20px
+    }
+
+    .score {
+      font-family: 'Courier New', Courier;
+      font-size: 300%;
+      text-align: center;
+    }
+    .computerChoice {
+      font-family: 'Courier New', Courier;
+      font-size: 200%;
+      padding-bottom: 30px;
+      text-align: center;
+    }
+    .humanChoice {
+      font-family: 'Courier New', Courier;
+      font-size: 200%;
+      padding-bottom: 30px;
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1> HUMANS VS ROBOTS </h1>
+  <div class ="score">
+      <span id="humanScore" padding-left: 90px>0</span>
+      <span id="compScore">0</span>
+  </div>
+
+  <h2> Choose your weapon: </h2>
+
+  <div class ="choice">
+    <button id="rock_pete" class="choice_button"> ROCK </button>
+    <button id="paper_pete" class="choice_button"> PAPER </button>
+    <button id="scissors_pete" class="choice_button"> SCISSORS </button>
+  </div>
+
+    <div id="choiceHuman" class="choiceHuman"></div>
+
+    <div id="humanChoice" class= "humanChoice"></div>
+    <div id="computerChoice" class= "computerChoice"></div>
+
+    <div id="result"></div>
+
+    <script src="rps.js"></script>
+</body>
+
+</html>
